@@ -83,3 +83,16 @@ Install the required dependencies using pip install -r requirements.txt.
 Start the Flask application using python app.py.
 Access the API at http://localhost:5000.
 
+
+Apache Airflow for scheduling the weekly mail. 
+Why Apache Airflow:
+Apache Airflow is an open-source platform for programmatically authoring, scheduling, and monitoring workflows. It is used to automate and orchestrate complex tasks and workflows, making it an ideal choice for managing and scheduling data pipelines, ETL (Extract, Transform, Load) processes, and more.
+
+How to Start Apache Airflow:
+airflow webserver -p 8080
+
+Start the scheduler for task scheduling:
+airflow scheduler
+
+It contains a dag file(send_mail_dag.py) which is the logic to hit the send-report endpoint on scheduled time.
+Now you can access the Airflow web UI at http://localhost:8080.
