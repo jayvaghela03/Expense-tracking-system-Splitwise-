@@ -71,6 +71,33 @@ Create an Expense: Users can create a new expense, indicating the payer, total a
 Get Expense by ID: Retrieve expense details by specifying an expense ID.
 Get All Expenses: Fetch a list of all recorded expenses.
 
+Endpoints 
+users- Operations on users
+
+/register(POST) - to register new user
+
+/login(POST) - to login user (get access token bearer)
+
+/user/{user_id}(GET) - to get user information by user_id
+
+/user/{user_id}(DELETE) - to delet user by user_id
+
+expenses - Operations on expenses
+
+/expense(POST) - to create an expense
+
+/expense(GET) - to get list of expenses
+
+/expense/{expense_id} (GET) - to get expense information by expense_id
+
+/expense/{expense_id}(DELETE) - to delete expense information by expense_id
+
+/my-expenses(GET) - to get expenses associated by you
+
+/my-expenses/simplified(GET) - to get simplified version of expenses associated by you
+
+/send-report(GET) - to send report to all the users
+
 ###Class Structure
 The system's core data structure includes two primary classes:
 User Class: Represents a user in the system and includes fields for user ID, name, email, mobile number, and balance. The balance field stores the financial balance of the user.
