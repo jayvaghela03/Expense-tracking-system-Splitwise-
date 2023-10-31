@@ -19,7 +19,7 @@ dag = DAG(
 )
 
 def trigger_mail():
-    url = "http://localhost:5000/send-report"  # Include the protocol (e.g., "http://")
+    url = "http://0.0.0.0:5000/send-report"  # Include the protocol (e.g., "http://")
     response = requests.get(url)
     print(response.text)  # Print the response content
 
