@@ -1,6 +1,4 @@
 from db import db
-from .expense import ExpenseModel
-from sqlalchemy import and_, func
 
 class UserModel(db.Model):
     __tablename__ = "users"
