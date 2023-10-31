@@ -1,0 +1,9 @@
+os
+flask
+passlib
+requests
+marshmallow
+flas_smorest
+apache-airlflow
+flask_sqlalchemy
+flask_jwt_extended

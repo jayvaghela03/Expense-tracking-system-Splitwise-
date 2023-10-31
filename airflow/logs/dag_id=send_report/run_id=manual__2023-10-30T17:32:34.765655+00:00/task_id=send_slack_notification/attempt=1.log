@@ -1,0 +1,277 @@
+[2023-10-30T23:02:37.761+0530] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: send_report.send_slack_notification manual__2023-10-30T17:32:34.765655+00:00 [queued]>
+[2023-10-30T23:02:37.768+0530] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: send_report.send_slack_notification manual__2023-10-30T17:32:34.765655+00:00 [queued]>
+[2023-10-30T23:02:37.768+0530] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2023-10-30T23:02:37.785+0530] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): send_slack_notification> on 2023-10-30 17:32:34.765655+00:00
+[2023-10-30T23:02:37.788+0530] {standard_task_runner.py:57} INFO - Started process 208735 to run task
+[2023-10-30T23:02:37.793+0530] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'send_report', 'send_slack_notification', 'manual__2023-10-30T17:32:34.765655+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/send_mail_dag.py', '--cfg-path', '/tmp/tmpzuth06bf']
+[2023-10-30T23:02:37.794+0530] {standard_task_runner.py:85} INFO - Job 5: Subtask send_slack_notification
+[2023-10-30T23:02:37.832+0530] {task_command.py:410} INFO - Running <TaskInstance: send_report.send_slack_notification manual__2023-10-30T17:32:34.765655+00:00 [running]> on host jay-TUF-Gaming-FX505DY
+[2023-10-30T23:02:37.900+0530] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='jay' AIRFLOW_CTX_DAG_ID='send_report' AIRFLOW_CTX_TASK_ID='send_slack_notification' AIRFLOW_CTX_EXECUTION_DATE='2023-10-30T17:32:34.765655+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-10-30T17:32:34.765655+00:00'
+[2023-10-30T23:02:37.917+0530] {logging_mixin.py:150} INFO - <!doctype html>
+<html lang=en>
+  <head>
+    <title>TypeError: argument of type &#39;NoneType&#39; is not iterable
+ // Werkzeug Debugger</title>
+    <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resource&amp;f=style.css">
+    <link rel="shortcut icon"
+        href="?__debugger__=yes&amp;cmd=resource&amp;f=console.png">
+    <script src="?__debugger__=yes&amp;cmd=resource&amp;f=debugger.js"></script>
+    <script>
+      var CONSOLE_MODE = false,
+          EVALEX = true,
+          EVALEX_TRUSTED = false,
+          SECRET = "SbsygdMT2LVpoYThtmGG";
+    </script>
+  </head>
+  <body style="background-color: #fff">
+    <div class="debugger">
+<h1>TypeError</h1>
+<div class="detail">
+  <p class="errormsg">TypeError: argument of type &#39;NoneType&#39; is not iterable
+</p>
+</div>
+<h2 class="traceback">Traceback <em>(most recent call last)</em></h2>
+<div class="traceback">
+  <h3></h3>
+  <ul><li><div class="frame" id="frame-140207181623920">
+  <h4>File <cite class="filename">"/home/jay/.local/lib/python3.8/site-packages/flask/cli.py"</cite>,
+      line <em class="line">907</em>,
+      in <code class="function">app</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">            </span># it later so the debugger or server can handle it.</pre>
+<pre class="line before"><span class="ws">            </span>traceback.print_exc()</pre>
+<pre class="line before"><span class="ws">            </span>err = e</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">            </span>def app(environ, start_response):</pre>
+<pre class="line current"><span class="ws">                </span>raise err from None</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">        </span>else:</pre>
+<pre class="line after"><span class="ws">            </span># When not reloading, raise the error immediately so the</pre>
+<pre class="line after"><span class="ws">            </span># command fails.</pre>
+<pre class="line after"><span class="ws">            </span>raise e from None</pre></div>
+</div>
+
+<li><div class="frame" id="frame-140207181625712">
+  <h4>File <cite class="filename">"/home/jay/.local/lib/python3.8/site-packages/flask/cli.py"</cite>,
+      line <em class="line">898</em>,
+      in <code class="function">run_command</code></h4>
+  <div class="source "><pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">    </span>The reloader and debugger are enabled by default with the &#39;--debug&#39;</pre>
+<pre class="line before"><span class="ws">    </span>option.</pre>
+<pre class="line before"><span class="ws">    </span>&#34;&#34;&#34;</pre>
+<pre class="line before"><span class="ws">    </span>try:</pre>
+<pre class="line current"><span class="ws">        </span>app = info.load_app()</pre>
+<pre class="line after"><span class="ws">    </span>except Exception as e:</pre>
+<pre class="line after"><span class="ws">        </span>if is_running_from_reloader():</pre>
+<pre class="line after"><span class="ws">            </span># When reloading, print out the error immediately, but raise</pre>
+<pre class="line after"><span class="ws">            </span># it later so the debugger or server can handle it.</pre>
+<pre class="line after"><span class="ws">            </span>traceback.print_exc()</pre></div>
+</div>
+
+<li><div class="frame" id="frame-140207181623696">
+  <h4>File <cite class="filename">"/home/jay/.local/lib/python3.8/site-packages/flask/cli.py"</cite>,
+      line <em class="line">313</em>,
+      in <code class="function">load_app</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">                </span>import_name = prepare_import(path)</pre>
+<pre class="line before"><span class="ws">                </span>app = locate_app(import_name, name)</pre>
+<pre class="line before"><span class="ws">            </span>else:</pre>
+<pre class="line before"><span class="ws">                </span>for path in (&#34;wsgi.py&#34;, &#34;app.py&#34;):</pre>
+<pre class="line before"><span class="ws">                    </span>import_name = prepare_import(path)</pre>
+<pre class="line current"><span class="ws">                    </span>app = locate_app(import_name, None, raise_if_not_found=False)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">                    </span>if app:</pre>
+<pre class="line after"><span class="ws">                        </span>break</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">        </span>if not app:</pre></div>
+</div>
+
+<li><div class="frame" id="frame-140207181627168">
+  <h4>File <cite class="filename">"/home/jay/.local/lib/python3.8/site-packages/flask/cli.py"</cite>,
+      line <em class="line">219</em>,
+      in <code class="function">locate_app</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">    </span>return &#34;.&#34;.join(module_name[::-1])</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws"></span>def locate_app(module_name, app_name, raise_if_not_found=True):</pre>
+<pre class="line before"><span class="ws">    </span>try:</pre>
+<pre class="line current"><span class="ws">        </span>__import__(module_name)</pre>
+<pre class="line after"><span class="ws">    </span>except ImportError:</pre>
+<pre class="line after"><span class="ws">        </span># Reraise the ImportError if it occurred within the imported module.</pre>
+<pre class="line after"><span class="ws">        </span># Determine this by checking whether the trace has a depth &gt; 1.</pre>
+<pre class="line after"><span class="ws">        </span>if sys.exc_info()[2].tb_next:</pre>
+<pre class="line after"><span class="ws">            </span>raise NoAppException(</pre></div>
+</div>
+
+<li><div class="frame" id="frame-140207181625824">
+  <h4>File <cite class="filename">"/home/jay/Teachmint/app/app.py"</cite>,
+      line <em class="line">9</em>,
+      in <code class="function">&lt;module&gt;</code></h4>
+  <div class="source "><pre class="line before"><span class="ws"></span>from flask_jwt_extended import JWTManager</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws"></span>from  db import db</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws"></span>from resources.user import blp as UserBlueprint</pre>
+<pre class="line current"><span class="ws"></span>from resources.expense import blp as ExpenseBlueprint</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws"></span>def create_app(db_url=None):</pre>
+<pre class="line after"><span class="ws">    </span>app = Flask(__name__)</pre>
+<pre class="line after"><span class="ws">    </span>app.config[&#34;PROPAGATE_EXCEPTIONS&#34;] = True</pre></div>
+</div>
+
+<li><div class="frame" id="frame-140207181652256">
+  <h4>File <cite class="filename">"/home/jay/Teachmint/app/resources/expense.py"</cite>,
+      line <em class="line">98</em>,
+      in <code class="function">&lt;module&gt;</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">        </span>final_output = get_my_expenses(all_expenses, name)</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>return final_output</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws"></span>@blp.route(&#34;/send&#34;)</pre>
+<pre class="line current"><span class="ws"></span>class SendMail(MethodView):</pre>
+<pre class="line after"><span class="ws">    </span>def send(self):</pre>
+<pre class="line after"><span class="ws">        </span>subject = &#34;test&#34;</pre>
+<pre class="line after"><span class="ws">        </span>recipients = &#34;vaghelajay03@gmail.com&#34;</pre>
+<pre class="line after"><span class="ws">        </span>body = &#34;nothing&#34;</pre>
+<pre class="line after"><span class="ws">        </span>message = Message(subject, recipients=recipients, body=body)</pre></div>
+</div>
+
+<li><div class="frame" id="frame-140207181653936">
+  <h4>File <cite class="filename">"/home/jay/.local/lib/python3.8/site-packages/flask_smorest/blueprint.py"</cite>,
+      line <em class="line">160</em>,
+      in <code class="function">decorator</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">        </span>Calls :meth:`add_url_rule &lt;Blueprint.add_url_rule&gt;`.</pre>
+<pre class="line before"><span class="ws">        </span>&#34;&#34;&#34;</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>def decorator(func):</pre>
+<pre class="line before"><span class="ws">            </span>endpoint = options.pop(&#34;endpoint&#34;, None)</pre>
+<pre class="line current"><span class="ws">            </span>self.add_url_rule(</pre>
+<pre class="line after"><span class="ws">                </span>rule, endpoint, func, parameters=parameters, tags=tags, **options</pre>
+<pre class="line after"><span class="ws">            </span>)</pre>
+<pre class="line after"><span class="ws">            </span>return func</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">        </span>return decorator</pre></div>
+</div>
+
+<li><div class="frame" id="frame-140207181654048">
+  <h4>File <cite class="filename">"/home/jay/.local/lib/python3.8/site-packages/flask_smorest/blueprint.py"</cite>,
+      line <em class="line">150</em>,
+      in <code class="function">add_url_rule</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">        </span>else:</pre>
+<pre class="line before"><span class="ws">            </span>func = view_func</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span># Add URL rule in Flask and store endpoint documentation</pre>
+<pre class="line before"><span class="ws">        </span>super().add_url_rule(rule, endpoint, func, **options)</pre>
+<pre class="line current"><span class="ws">        </span>self._store_endpoint_docs(endpoint, view_func, parameters, tags, **options)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def route(self, rule, *, parameters=None, tags=None, **options):</pre>
+<pre class="line after"><span class="ws">        </span>&#34;&#34;&#34;Decorator to register view function in application and documentation</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">        </span>Calls :meth:`add_url_rule &lt;Blueprint.add_url_rule&gt;`.</pre></div>
+</div>
+
+<li><div class="frame" id="frame-140207181652144">
+  <h4>File <cite class="filename">"/home/jay/.local/lib/python3.8/site-packages/flask_smorest/blueprint.py"</cite>,
+      line <em class="line">215</em>,
+      in <code class="function">_store_endpoint_docs</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">            </span>endpoint_doc_info[method.lower()] = doc</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span># MethodView (class)</pre>
+<pre class="line before"><span class="ws">        </span>if isinstance(obj, type(MethodView)):</pre>
+<pre class="line before"><span class="ws">            </span>for method in self.HTTP_METHODS:</pre>
+<pre class="line current"><span class="ws">                </span>if method in obj.methods:</pre>
+<pre class="line after"><span class="ws">                    </span>if &#34;methods&#34; not in options or method in options[&#34;methods&#34;]:</pre>
+<pre class="line after"><span class="ws">                        </span>func = getattr(obj, method.lower())</pre>
+<pre class="line after"><span class="ws">                        </span>store_method_docs(method, func)</pre>
+<pre class="line after"><span class="ws">        </span># Function</pre>
+<pre class="line after"><span class="ws">        </span>else:</pre></div>
+</div>
+</ul>
+  <blockquote>TypeError: argument of type &#39;NoneType&#39; is not iterable
+</blockquote>
+</div>
+
+<div class="plain">
+    <p>
+      This is the Copy/Paste friendly version of the traceback.
+    </p>
+    <textarea cols="50" rows="10" name="code" readonly>Traceback (most recent call last):
+  File &#34;/home/jay/.local/lib/python3.8/site-packages/flask/cli.py&#34;, line 907, in app
+    raise err from None
+  File &#34;/home/jay/.local/lib/python3.8/site-packages/flask/cli.py&#34;, line 898, in run_command
+    app = info.load_app()
+  File &#34;/home/jay/.local/lib/python3.8/site-packages/flask/cli.py&#34;, line 313, in load_app
+    app = locate_app(import_name, None, raise_if_not_found=False)
+  File &#34;/home/jay/.local/lib/python3.8/site-packages/flask/cli.py&#34;, line 219, in locate_app
+    __import__(module_name)
+  File &#34;/home/jay/Teachmint/app/app.py&#34;, line 9, in &lt;module&gt;
+    from resources.expense import blp as ExpenseBlueprint
+  File &#34;/home/jay/Teachmint/app/resources/expense.py&#34;, line 98, in &lt;module&gt;
+    class SendMail(MethodView):
+  File &#34;/home/jay/.local/lib/python3.8/site-packages/flask_smorest/blueprint.py&#34;, line 160, in decorator
+    self.add_url_rule(
+  File &#34;/home/jay/.local/lib/python3.8/site-packages/flask_smorest/blueprint.py&#34;, line 150, in add_url_rule
+    self._store_endpoint_docs(endpoint, view_func, parameters, tags, **options)
+  File &#34;/home/jay/.local/lib/python3.8/site-packages/flask_smorest/blueprint.py&#34;, line 215, in _store_endpoint_docs
+    if method in obj.methods:
+TypeError: argument of type &#39;NoneType&#39; is not iterable
+</textarea>
+</div>
+<div class="explanation">
+  The debugger caught an exception in your WSGI application.  You can now
+  look at the traceback which led to the error.  <span class="nojavascript">
+  If you enable JavaScript you can also use additional features such as code
+  execution (if the evalex feature is enabled), automatic pasting of the
+  exceptions and much more.</span>
+</div>
+      <div class="footer">
+        Brought to you by <strong class="arthur">DON'T PANIC</strong>, your
+        friendly Werkzeug powered traceback interpreter.
+      </div>
+    </div>
+
+    <div class="pin-prompt">
+      <div class="inner">
+        <h3>Console Locked</h3>
+        <p>
+          The console is locked and needs to be unlocked by entering the PIN.
+          You can find the PIN printed out on the standard output of your
+          shell that runs the server.
+        <form>
+          <p>PIN:
+            <input type=text name=pin size=14>
+            <input type=submit name=btn value="Confirm Pin">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!--
+
+Traceback (most recent call last):
+  File "/home/jay/.local/lib/python3.8/site-packages/flask/cli.py", line 907, in app
+    raise err from None
+  File "/home/jay/.local/lib/python3.8/site-packages/flask/cli.py", line 898, in run_command
+    app = info.load_app()
+  File "/home/jay/.local/lib/python3.8/site-packages/flask/cli.py", line 313, in load_app
+    app = locate_app(import_name, None, raise_if_not_found=False)
+  File "/home/jay/.local/lib/python3.8/site-packages/flask/cli.py", line 219, in locate_app
+    __import__(module_name)
+  File "/home/jay/Teachmint/app/app.py", line 9, in <module>
+    from resources.expense import blp as ExpenseBlueprint
+  File "/home/jay/Teachmint/app/resources/expense.py", line 98, in <module>
+    class SendMail(MethodView):
+  File "/home/jay/.local/lib/python3.8/site-packages/flask_smorest/blueprint.py", line 160, in decorator
+    self.add_url_rule(
+  File "/home/jay/.local/lib/python3.8/site-packages/flask_smorest/blueprint.py", line 150, in add_url_rule
+    self._store_endpoint_docs(endpoint, view_func, parameters, tags, **options)
+  File "/home/jay/.local/lib/python3.8/site-packages/flask_smorest/blueprint.py", line 215, in _store_endpoint_docs
+    if method in obj.methods:
+TypeError: argument of type 'NoneType' is not iterable
+
+
+-->
+[2023-10-30T23:02:37.918+0530] {python.py:183} INFO - Done. Returned value was: None
+[2023-10-30T23:02:37.928+0530] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=send_report, task_id=send_slack_notification, execution_date=20231030T173234, start_date=20231030T173237, end_date=20231030T173237
+[2023-10-30T23:02:37.962+0530] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-10-30T23:02:37.979+0530] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check
