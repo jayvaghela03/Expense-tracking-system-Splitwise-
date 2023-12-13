@@ -1,4 +1,4 @@
-# Teachmint
+# Expense tracking system
 ### Description
 The Expense Sharing System is a web-based application that allows users to add and manage expenses. Users can split expenses equally, specify exact shares, or use percentages to distribute costs. The system keeps track of users' balances and provides a simple way to settle debts among friends and housemates.
 
